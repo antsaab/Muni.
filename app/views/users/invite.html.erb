@@ -1,0 +1,22 @@
+フォロー一覧
+<% @user.followings.each do |user| %>フォロー一覧
+<% @user.followings.each do |user| %>
+ <%= logger.debug(user.inspect) %>
+    <div> 
+    <%= image_tag user.image_url, size: "60x60" if user.image? %>
+    </div>
+    <%= link_to entries_room_path(id: params[:id], user_id: user.id), method: :post do %>
+        <%= user.name %>
+    <% end %>
+<% end %>
+
+<p><%= link_to "マイページへ戻る", user_path(current_user.id) %></p>
+    <div> 
+    <%= image_tag user.image_url, size: "60x60" if user.image? %>
+    </div>
+    <%= link_to entries_room_path(id: params[:id], user_id: user.id), method: :post do %>
+        <%= user.name %>
+    <% end %>
+<% end %>
+
+<p><%= link_to "マイページへ戻る", user_path(current_user.id) %></p>

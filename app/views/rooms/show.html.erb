@@ -1,0 +1,11 @@
+<p><%= "ルーム名：#{@room.name}" %></p>
+<input type="text" data-behavior="room_speaker" data-user="<%= current_user.id %>" data-room="<%= @room.id %>">
+<div id="posts">
+ <% @posts.each do |post| %>
+  <p><%= post.message %></p>
+ <% end %>
+</div>
+
+
+
+<%= link_to '招待する', inviting_room_path(room_id:params[:room_id], user_id:current_user.id) %>

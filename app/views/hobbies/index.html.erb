@@ -1,0 +1,18 @@
+
+<h1>Muni.</h1>
+<h3>コメント一覧</h3>
+
+<%= link_to "新規投稿へ", new_hobby_path %>
+
+<% if user_signed_in? %>
+  <%= link_to "マイページへ", user_path(current_user.id) %>
+<% end %>
+
+<%= link_to "グループ一覧", rooms_path %>
+
+<%= link_to "フォロー", relationships_followings_path%>
+<%= link_to "フォロワー", relationships_followers_path%>
+
+
+
+

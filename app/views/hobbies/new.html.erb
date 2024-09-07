@@ -1,0 +1,19 @@
+<h1>Muni.</h1>
+<h3>投稿ページ</h3>
+
+<%= form_for @hobby do |f| %>
+
+<div class= "field">
+    <%=f.label :"趣味" %>
+    <%=f.text_field :hobby, :size=>30 %>
+</div>
+
+<div class="field">
+    <%=f.label :"ジャンル"%>
+    <%=f.text_field :genre, :size=>30%>
+</div>
+
+<%= f.submit "投稿する" %>
+
+<%end%>
+<%= link_to "投稿一覧に戻る", hobbies_path %>
